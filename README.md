@@ -1,4 +1,4 @@
-# **Vendor_and_Order_Tracker.Solution**
+# **HairSalon.Solution**
 Project Initiated: 2021-01-01<br>
 Updated: 2021-01-01
 ## **Project Description**
