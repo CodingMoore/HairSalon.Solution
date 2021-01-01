@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Template.Models;
+using HairSalon.Models;
 
-namespace Template
+namespace HairSalon
 {
   public class Startup
   {
@@ -25,7 +25,7 @@ namespace Template
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-          .AddDbContext<TemplateContext>(options => options
+          .AddDbContext<HairSalonContext>(options => options
           .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
@@ -39,7 +39,7 @@ namespace Template
       {
         routes.MapRoute(
           name: "default",
-          template: "{controller=Home}/{action=Index}/{id?}");
+          HairSalon: "{controller=Home}/{action=Index}/{id?}");
       });
 
       app.Run(async (context) =>
