@@ -1,22 +1,19 @@
-using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
 using Template.Models;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Template.Controllers
 {
   public class ParentsController : Controller
   {
-    [HttpGet("/parents")]
-    public ActionResult Index()
+    private readonly TemplateContext _db;
+    public ParentsController(TemplateContext db)
     {
-      return View();
+      _db = db;
     }
 
-    [HttpPost("/parents/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
+
   }
 }
