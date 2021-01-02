@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 
-namespace Template.Models
+namespace HairSalon.Models
 {
-    public class Parent
+    public class Stylist
     {
-        public Parent()
+        public Stylist()
         {
-            this.Childs = new HashSet<Child>();
+            this.Clients = new HashSet<Client>();
         }
 
-        public int ParentId { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<Child> Childs { get; set; }
+        public int StylistId { get; set; }
+        public string StylistName { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
     }
 }

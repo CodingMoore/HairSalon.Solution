@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Template.Models
+namespace HairSalon.Models
 {
-  public class TemplateContext : DbContext
+  public class HairSalonContext : DbContext
   {
-    public virtual DbSet<Parent> Parents { get; set; }
-    public DbSet<Child> Childs { get; set; }
+    public virtual DbSet<Stylist> Stylists { get; set; }
+    public DbSet<Client> Clients { get; set; }
 
-    public TemplateContext(DbContextOptions options) : base(options) { }
+    public HairSalonContext(DbContextOptions options) : base(options) { }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseLazyLoadingProxies();

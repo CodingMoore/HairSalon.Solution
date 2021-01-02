@@ -1,12 +1,12 @@
 using System;
 
-namespace Template.Models
+namespace HairSalon.Models
 {
-  public class Child
+  public class Client
   {
-    public int ChildId { get; set; }
-    public string Description { get; set; }
-    public int ParentId { get; set; }
-    public virtual Parent Parent { get; set; }
+    public int ClientId { get; set; }
+    public string ClientName { get; set; }
+    public int StylistId { get; set; }
+    public virtual Stylist Stylist { get; set; }
   }
 }  
